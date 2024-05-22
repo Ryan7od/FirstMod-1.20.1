@@ -1,5 +1,9 @@
 {
   "item.firstmod.tungsten": "Tungsten",
   "item.firstmod.raw_tungsten": "Raw Tungsten",
+
+  "block.firstmod.tungsten_block": "Block of Tungsten",
+  "block.firstmod.tungsten_ore": "Tungsten Ore",
+
   "creativetab.materials_tab": "Mod Materials Tab"
 }

@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.ryanod.firstmod.block.ModBlocks;
 import net.ryanod.firstmod.item.ModCreativeModeTabs;
 import net.ryanod.firstmod.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class FirstMod
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

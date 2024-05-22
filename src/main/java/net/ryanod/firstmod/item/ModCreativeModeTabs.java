@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.ryanod.firstmod.FirstMod;
+import net.ryanod.firstmod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -19,6 +20,9 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TUNGSTEN.get());
                         pOutput.accept(ModItems.RAW_TUNGSTEN.get());
+
+                        pOutput.accept(ModBlocks.TUNGSTEN_BLOCK.get());
+                        pOutput.accept(ModBlocks.TUNGSTEN_ORE.get());
                     })
                     .build());
 
