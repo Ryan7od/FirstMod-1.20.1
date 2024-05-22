@@ -1,9 +1,11 @@
 {
   "item.firstmod.tungsten": "Tungsten",
   "item.firstmod.raw_tungsten": "Raw Tungsten",
+  "item.firstmod.metal_detector": "Metal Detector",
 
   "block.firstmod.tungsten_block": "Block of Tungsten",
   "block.firstmod.tungsten_ore": "Tungsten Ore",
+  "block.firstmod.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
 
   "creativetab.materials_tab": "Mod Materials Tab"
 }

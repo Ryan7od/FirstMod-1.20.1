@@ -23,6 +23,9 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.TUNGSTEN_BLOCK.get());
                         pOutput.accept(ModBlocks.TUNGSTEN_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
+
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
                     })
                     .build());
 

@@ -1,9 +1,11 @@
 package net.ryanod.firstmod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.ryanod.firstmod.FirstMod;
 import net.ryanod.firstmod.item.ModItems;
 
+import javax.tools.Tool;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -20,10 +23,14 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FirstMod.MOD_ID);
 
     public static final RegistryObject<Block> TUNGSTEN_BLOCK = registerBlock("tungsten_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
-
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
     public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
+                    .requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+
+    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)
+                    .requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

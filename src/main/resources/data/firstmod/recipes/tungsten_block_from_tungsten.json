@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:tungsten"
+    },
+    "$": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "firstmod:tungsten_block"
+  }
+}
