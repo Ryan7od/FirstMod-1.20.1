@@ -49,7 +49,7 @@ public class FirstMod
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TUNGSTEN);
         }if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.TUNGSTEN_ORE);
+            event.accept(ModItems.RAW_TUNGSTEN);
         }
     }
 

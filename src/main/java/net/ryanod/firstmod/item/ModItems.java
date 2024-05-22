@@ -13,7 +13,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> TUNGSTEN = ITEMS.register("tungsten",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TUNGSTEN_ORE = ITEMS.register("tungsten_ore",
+    public static final RegistryObject<Item> RAW_TUNGSTEN = ITEMS.register("raw_tungsten",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

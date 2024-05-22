@@ -3,7 +3,6 @@ package net.ryanod.firstmod.item;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,7 +18,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.materials_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TUNGSTEN.get());
-                        pOutput.accept(ModItems.TUNGSTEN_ORE.get());
+                        pOutput.accept(ModItems.RAW_TUNGSTEN.get());
                     })
                     .build());
 
