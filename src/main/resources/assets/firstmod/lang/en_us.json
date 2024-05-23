@@ -1,7 +1,16 @@
 {
   "item.firstmod.tungsten": "Tungsten",
   "item.firstmod.raw_tungsten": "Raw Tungsten",
+
   "item.firstmod.metal_detector": "Metal Detector",
+  "item.firstmod.iron_detector": "Iron Detector",
+  "item.firstmod.diamond_detector": "Diamond Detector",
+  "item.firstmod.ancient_debris_detector": "Ancient Debris Detector",
+
+  "item.firstmod.metal_magnet": "Metal Magnet",
+  "item.firstmod.iron_magnet": "Iron Magnet",
+  "item.firstmod.diamond_magnet": "Diamond Magnet",
+  "item.firstmod.ancient_debris_magnet": "Ancient Debris Magnet",
 
   "block.firstmod.tungsten_block": "Block of Tungsten",
   "block.firstmod.tungsten_ore": "Tungsten Ore",

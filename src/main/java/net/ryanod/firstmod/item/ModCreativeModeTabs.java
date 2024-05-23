@@ -26,6 +26,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.IRON_DETECTOR.get());
+                        pOutput.accept(ModItems.DIAMOND_DETECTOR.get());
+                        pOutput.accept(ModItems.ANCIENT_DEBRIS_DETECTOR.get());
+
+                        pOutput.accept(ModItems.METAL_MAGNET.get());
+                        pOutput.accept(ModItems.IRON_MAGNET.get());
+                        pOutput.accept(ModItems.DIAMOND_MAGNET.get());
+                        pOutput.accept(ModItems.ANCIENT_DEBRIS_MAGNET.get());
                     })
                     .build());
 

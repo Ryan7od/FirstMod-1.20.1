@@ -1,27 +1,28 @@
 package net.ryanod.firstmod.item.custom;
 
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.ryanod.firstmod.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
-import net.minecraft.core.BlockPos;
 
-public class MetalDetectorItem extends Item {
-    public MetalDetectorItem(Properties pProperty) {
+public class IronMagnetItem extends Item {
+    public IronMagnetItem(Properties pProperty) {
         super(pProperty);
     }
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        if (pContext.getLevel().isClientSide()) {
+        if (!pContext.getLevel().isClientSide()) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
@@ -30,7 +31,9 @@ public class MetalDetectorItem extends Item {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
                 if (isOre(state)) {
-                    outputOreCoords(positionClicked.below(i), player, state.getBlock());
+                    player.getInventory().add(new ItemStack(state.getBlock()));
+                    pContext.getLevel().setBlock(positionClicked.below(i), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
+                    pContext.getLevel().explode(player, positionClicked.getX(), positionClicked.getY()-i, positionClicked.getZ(), 1, Level.ExplosionInteraction.BLOCK);
                     foundBlock = true;
                     
                     break;
@@ -38,7 +41,7 @@ public class MetalDetectorItem extends Item {
             }
 
             if (!foundBlock) {
-                player.sendSystemMessage(Component.literal("No ores found"));
+                player.sendSystemMessage(Component.literal("No iron found"));
             }
         }
 
@@ -48,26 +51,8 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void outputOreCoords(BlockPos blockPos, Player player, Block block) {
-        player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at ("
-        + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
-    }
-
     private boolean isOre(BlockState state) {
         return state.is(Blocks.IRON_ORE)
-                || state.is(Blocks.COPPER_ORE)
-                || state.is(Blocks.DIAMOND_ORE)
-                || state.is(Blocks.GOLD_ORE)
-                || state.is(Blocks.LAPIS_ORE)
-                || state.is(Blocks.EMERALD_ORE)
-                || state.is(Blocks.REDSTONE_ORE)
-                || state.is(Blocks.DEEPSLATE_IRON_ORE)
-                || state.is(Blocks.DEEPSLATE_COPPER_ORE)
-                || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
-                || state.is(Blocks.DEEPSLATE_GOLD_ORE)
-                || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
-                || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
-                || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
-                || state.is(Blocks.ANCIENT_DEBRIS);
+                || state.is(Blocks.DEEPSLATE_IRON_ORE);
     }
 }

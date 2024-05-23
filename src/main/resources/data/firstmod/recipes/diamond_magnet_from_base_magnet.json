@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "$": {
+      "item": "firstmod:metal_magnet"
+    }
+  },
+  "result": {
+    "item": "firstmod:diamond_magnet"
+  }
+}

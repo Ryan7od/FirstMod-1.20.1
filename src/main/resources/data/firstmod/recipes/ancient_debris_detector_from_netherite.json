@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "$": {
+      "item": "firstmod:metal_detector"
+    }
+  },
+  "result": {
+    "item": "firstmod:ancient_debris_detector",
+    "count": 2
+  }
+}
