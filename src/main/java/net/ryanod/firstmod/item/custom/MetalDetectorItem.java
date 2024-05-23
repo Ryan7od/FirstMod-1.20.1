@@ -61,6 +61,7 @@ public class MetalDetectorItem extends Item {
                 || state.is(Blocks.LAPIS_ORE)
                 || state.is(Blocks.EMERALD_ORE)
                 || state.is(Blocks.REDSTONE_ORE)
+                || state.is(ModBlocks.TUNGSTEN_ORE.get())
                 || state.is(Blocks.DEEPSLATE_IRON_ORE)
                 || state.is(Blocks.DEEPSLATE_COPPER_ORE)
                 || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
@@ -68,6 +69,7 @@ public class MetalDetectorItem extends Item {
                 || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
                 || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
                 || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
+                || state.is(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get())
                 || state.is(Blocks.ANCIENT_DEBRIS);
     }
 }

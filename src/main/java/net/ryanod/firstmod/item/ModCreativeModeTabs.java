@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TUNGSTEN.get());
                         pOutput.accept(ModItems.RAW_TUNGSTEN.get());
+                        pOutput.accept(ModItems.TUNGSTEN_SCRAPS.get());
 
                         pOutput.accept(ModBlocks.TUNGSTEN_BLOCK.get());
                         pOutput.accept(ModBlocks.TUNGSTEN_ORE.get());
@@ -34,6 +35,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.IRON_MAGNET.get());
                         pOutput.accept(ModItems.DIAMOND_MAGNET.get());
                         pOutput.accept(ModItems.ANCIENT_DEBRIS_MAGNET.get());
+                        pOutput.accept(ModBlocks.MAGNET_BLOCK.get());
                     })
                     .build());
 

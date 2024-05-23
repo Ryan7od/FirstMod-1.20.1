@@ -16,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_TUNGSTEN = ITEMS.register("raw_tungsten",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TUNGSTEN_SCRAPS = ITEMS.register("tungsten_scraps",
+            () -> new Item(new Item.Properties().food(ModFoods.TUNGSTEN_SCRAPS)));
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
@@ -34,6 +36,8 @@ public class ModItems {
             () -> new DiamondMagnetItem(new Item.Properties().durability(50)));
     public static final RegistryObject<Item> ANCIENT_DEBRIS_MAGNET = ITEMS.register("ancient_debris_magnet",
             () -> new AncientDebrisMagnetItem(new Item.Properties().durability(50).fireResistant()));
+
+
 
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "firstmod:block/magnet_block_bottom",
+    "east": "firstmod:block/magnet_block_side",
+    "north": "firstmod:block/magnet_block_side",
+    "south": "firstmod:block/magnet_block_side",
+    "up": "firstmod:block/magnet_block_top",
+    "west": "firstmod:block/magnet_block_side"
+  }
+}

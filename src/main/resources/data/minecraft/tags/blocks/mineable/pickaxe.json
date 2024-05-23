@@ -2,6 +2,7 @@
   "values": [
     "firstmod:tungsten_ore",
     "firstmod:deepslate_tungsten_ore",
-    "firstmod:tungsten_block"
+    "firstmod:tungsten_block",
+    "firstmod:magnet_block"
   ]
 }

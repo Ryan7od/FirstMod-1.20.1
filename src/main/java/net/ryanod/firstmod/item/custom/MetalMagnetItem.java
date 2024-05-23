@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.ryanod.firstmod.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 
 public class MetalMagnetItem extends Item {
@@ -22,7 +23,10 @@ public class MetalMagnetItem extends Item {
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        if (!pContext.getLevel().isClientSide()) {
+        if (!pContext.getLevel().isClientSide() &&
+                !pContext.getLevel()
+                        .getBlockState(pContext.getClickedPos())
+                        .is(ModBlocks.MAGNET_BLOCK.get())) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
@@ -34,7 +38,7 @@ public class MetalMagnetItem extends Item {
                     player.getInventory().add(new ItemStack(state.getBlock()));
                     pContext.getLevel().setBlock(positionClicked.below(i), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                     pContext.getLevel().explode(player, positionClicked.getX(), positionClicked.getY()-i, positionClicked.getZ(), 1, Level.ExplosionInteraction.BLOCK);
-                    player.sendSystemMessage(Component.literal("Ore extracted"));
+                    player.sendSystemMessage(Component.literal(I18n.get(state.getBlock().getDescriptionId()) + " extracted"));
                     foundBlock = true;
                     
                     break;
@@ -61,6 +65,7 @@ public class MetalMagnetItem extends Item {
                 || state.is(Blocks.LAPIS_ORE)
                 || state.is(Blocks.EMERALD_ORE)
                 || state.is(Blocks.REDSTONE_ORE)
+                || state.is(ModBlocks.TUNGSTEN_ORE.get())
                 || state.is(Blocks.DEEPSLATE_IRON_ORE)
                 || state.is(Blocks.DEEPSLATE_COPPER_ORE)
                 || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
@@ -68,6 +73,7 @@ public class MetalMagnetItem extends Item {
                 || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
                 || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
                 || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
+                || state.is(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get())
                 || state.is(Blocks.ANCIENT_DEBRIS);
     }
 }

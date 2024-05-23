@@ -43,6 +43,7 @@ import net.minecraft.world.level.storage.LevelData;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.ticks.LevelTickAccess;
+import net.ryanod.firstmod.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -58,7 +59,10 @@ public class AncientDebrisMagnetItem extends Item {
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        if (!pContext.getLevel().isClientSide()) {
+        if (!pContext.getLevel().isClientSide()&&
+                !pContext.getLevel()
+                        .getBlockState(pContext.getClickedPos())
+                        .is(ModBlocks.MAGNET_BLOCK.get())) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
@@ -72,7 +76,7 @@ public class AncientDebrisMagnetItem extends Item {
                             player.getInventory().add(new ItemStack(state.getBlock()));
                             pContext.getLevel().setBlock(positionClicked.offset(x, -y, z), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                             pContext.getLevel().explode(player, positionClicked.getX()+x, positionClicked.getY()-y, positionClicked.getZ()+z, 1, Level.ExplosionInteraction.BLOCK);
-                            player.sendSystemMessage(Component.literal("Ancient debris extracted"));
+                            player.sendSystemMessage(Component.literal(I18n.get(state.getBlock().getDescriptionId())+ " extracted"));
                             foundBlock = true;
 
                             break;

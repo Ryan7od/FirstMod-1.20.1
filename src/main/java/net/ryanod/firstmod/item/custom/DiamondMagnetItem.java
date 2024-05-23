@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.ryanod.firstmod.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 
 public class DiamondMagnetItem extends Item {
@@ -22,7 +23,10 @@ public class DiamondMagnetItem extends Item {
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        if (!pContext.getLevel().isClientSide()) {
+        if (!pContext.getLevel().isClientSide()&&
+                !pContext.getLevel()
+                        .getBlockState(pContext.getClickedPos())
+                        .is(ModBlocks.MAGNET_BLOCK.get())) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
@@ -36,7 +40,7 @@ public class DiamondMagnetItem extends Item {
                             player.getInventory().add(new ItemStack(state.getBlock()));
                             pContext.getLevel().setBlock(positionClicked.offset(x, -y, z), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                             pContext.getLevel().explode(player, positionClicked.getX()+x, positionClicked.getY()-y, positionClicked.getZ()+z, 1, Level.ExplosionInteraction.BLOCK);
-                            player.sendSystemMessage(Component.literal("Diamond extracted"));
+                            player.sendSystemMessage(Component.literal(I18n.get(state.getBlock().getDescriptionId())+ " extracted"));
                             foundBlock = true;
 
                             break;
