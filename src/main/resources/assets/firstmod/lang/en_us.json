@@ -18,5 +18,9 @@
   "block.firstmod.tungsten_ore": "Tungsten Ore",
   "block.firstmod.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
 
-  "creativetab.materials_tab": "Mod Materials Tab"
+  "creativetab.materials_tab": "Mod Materials Tab",
+
+  "tooltip.firstmod.magnet_block": "This extends the range of any magnet, just right click on the block with your magnet!",
+  "tooltip.firstmod.metal_magnet": "If any ores are below you, this magnet will suck them up from underground and put them straight into your inventory, one at a time",
+  "tooltip.firstmod.metal_detector": "This metal detector will let you know if there are any valuables below your feet"
 }

@@ -10,7 +10,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -18,6 +20,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.ryanod.firstmod.block.ModBlocks;
 import net.ryanod.firstmod.item.ModItems;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class MagnetBlock extends Block {
     public MagnetBlock(Properties pProperties) {
@@ -65,6 +70,12 @@ public class MagnetBlock extends Block {
         }
 
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+        pTooltip.add(Component.translatable("tooltip.firstmod.magnet_block"));
+        super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 
     private boolean isOreConditional(BlockState state, ItemStack item) {
