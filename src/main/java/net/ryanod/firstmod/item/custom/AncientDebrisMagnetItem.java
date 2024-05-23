@@ -72,6 +72,7 @@ public class AncientDebrisMagnetItem extends Item {
                             player.getInventory().add(new ItemStack(state.getBlock()));
                             pContext.getLevel().setBlock(positionClicked.offset(x, -y, z), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                             pContext.getLevel().explode(player, positionClicked.getX()+x, positionClicked.getY()-y, positionClicked.getZ()+z, 1, Level.ExplosionInteraction.BLOCK);
+                            player.sendSystemMessage(Component.literal("Ancient debris extracted"));
                             foundBlock = true;
 
                             break;

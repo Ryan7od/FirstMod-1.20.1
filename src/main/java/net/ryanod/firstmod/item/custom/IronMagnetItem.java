@@ -34,6 +34,7 @@ public class IronMagnetItem extends Item {
                     player.getInventory().add(new ItemStack(state.getBlock()));
                     pContext.getLevel().setBlock(positionClicked.below(i), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                     pContext.getLevel().explode(player, positionClicked.getX(), positionClicked.getY()-i, positionClicked.getZ(), 1, Level.ExplosionInteraction.BLOCK);
+                    player.sendSystemMessage(Component.literal("Iron extracted"));
                     foundBlock = true;
                     
                     break;

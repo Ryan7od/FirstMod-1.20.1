@@ -36,6 +36,7 @@ public class DiamondMagnetItem extends Item {
                             player.getInventory().add(new ItemStack(state.getBlock()));
                             pContext.getLevel().setBlock(positionClicked.offset(x, -y, z), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pContext)), 0);
                             pContext.getLevel().explode(player, positionClicked.getX()+x, positionClicked.getY()-y, positionClicked.getZ()+z, 1, Level.ExplosionInteraction.BLOCK);
+                            player.sendSystemMessage(Component.literal("Diamond extracted"));
                             foundBlock = true;
 
                             break;
@@ -45,7 +46,7 @@ public class DiamondMagnetItem extends Item {
             }
 
             if (!foundBlock) {
-                player.sendSystemMessage(Component.literal("No diamond found"));
+                player.sendSystemMessage(Component.literal("No diamonds found"));
             }
         }
 
