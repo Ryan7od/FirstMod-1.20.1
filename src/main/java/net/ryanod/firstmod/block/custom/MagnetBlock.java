@@ -47,26 +47,30 @@ public class MagnetBlock extends Block {
 
             boolean foundBlock = false;
 
-            for (int x = -(range / 2); x <= (range / 2) && !foundBlock; x++) {
-                for (int y = -(range / 2); y <= (range / 2) && !foundBlock; y++) {
-                    for (int i = 0; i <= pPos.getY() + 64; i++) {
-                        BlockState state = pLevel.getBlockState(pPos.offset(x, -i, y));
+            if (range != 0) {
+                for (int x = -(range / 2); x <= (range / 2) && !foundBlock; x++) {
+                    for (int y = -(range / 2); y <= (range / 2) && !foundBlock; y++) {
+                        for (int i = 0; i <= pPos.getY() + 64; i++) {
+                            BlockState state = pLevel.getBlockState(pPos.offset(x, -i, y));
 
-                        if (isOreConditional(state, item)) {
-                            pPlayer.getInventory().add(new ItemStack(state.getBlock()));
-                            pLevel.setBlock(pPos.offset(x, -i, y), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pPlayer, pHand, new ItemStack(Items.AIR), pHit)), 0);
-                            pLevel.explode(pPlayer, pPos.getX(), pPos.getY() - i, pPos.getZ(), 1, Level.ExplosionInteraction.BLOCK);
-                            pPlayer.sendSystemMessage(Component.literal(I18n.get(state.getBlock().getDescriptionId()) + " extracted"));
-                            foundBlock = true;
+                            if (isOreConditional(state, item)) {
+                                pPlayer.getInventory().add(new ItemStack(state.getBlock()));
+                                pLevel.setBlock(pPos.offset(x, -i, y), Blocks.AIR.getStateForPlacement(new BlockPlaceContext(pPlayer, pHand, new ItemStack(Items.AIR), pHit)), 0);
+                                pLevel.explode(pPlayer, pPos.getX(), pPos.getY() - i, pPos.getZ(), 1, Level.ExplosionInteraction.BLOCK);
+                                pPlayer.sendSystemMessage(Component.literal(I18n.get(state.getBlock().getDescriptionId()) + " extracted"));
+                                foundBlock = true;
 
-                            break;
+                                break;
+                            }
                         }
                     }
                 }
-            }
 
-            if (!foundBlock) {
-                pPlayer.sendSystemMessage(Component.literal("No ores found"));
+                if (!foundBlock) {
+                    pPlayer.sendSystemMessage(Component.literal("No ores found"));
+                }
+            } else {
+                pPlayer.sendSystemMessage(Component.literal("Must use with a magnet"));
             }
         }
 
