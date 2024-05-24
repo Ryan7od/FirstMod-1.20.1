@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "firstmod:block/magnet_block_bottom",
+    "side": "firstmod:block/magnet_block_side",
+    "top": "firstmod:block/magnet_block_top"
+  }
+}

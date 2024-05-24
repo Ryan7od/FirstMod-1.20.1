@@ -1,0 +1,13 @@
+// 1.20.1	2024-05-24T01:58:44.2219108	Block States: firstmod
+156471271332655aa1c97b660034fbfc15b8c8b2 assets/firstmod/blockstates/deepslate_tungsten_ore.json
+8eb010570219315a83723c604f2ffd1c7049cf05 assets/firstmod/blockstates/magnet_block.json
+7d7248f49637bea7d8abd9718ffef1b7e43e125d assets/firstmod/blockstates/tungsten_block.json
+a7bb78e582aa1ea3d5adf9bf1a03b428ff02349e assets/firstmod/blockstates/tungsten_ore.json
+3c343e9b40035eebcb138ed4bf780855ebd11d69 assets/firstmod/models/block/deepslate_tungsten_ore.json
+bebf95e2634a7e75e3005c01eaa7b80390248530 assets/firstmod/models/block/magnet_block.json
+e95ac1491d03aae11370c961c6b42c213e41eefd assets/firstmod/models/block/tungsten_block.json
+ab03f631aa0e56c915a89ec9eecdce414b0e3e87 assets/firstmod/models/block/tungsten_ore.json
+19ad8a1c79f78564e531391f789e559335ed12d5 assets/firstmod/models/item/deepslate_tungsten_ore.json
+983b052da1cddf7356d251cab21dd1c49162f70c assets/firstmod/models/item/magnet_block.json
+f68ddc442c4c2198194216706b8bba6e8853aa4f assets/firstmod/models/item/tungsten_block.json
+f05b6edb0b22013606545742284ac1b465bb95f2 assets/firstmod/models/item/tungsten_ore.json

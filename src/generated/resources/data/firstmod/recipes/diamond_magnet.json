@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "firstmod:diamond_detector"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "E E",
+    "IDI",
+    "IRI"
+  ],
+  "result": {
+    "item": "firstmod:diamond_magnet"
+  },
+  "show_notification": true
+}

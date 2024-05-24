@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "tag": "firstmod:detector"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "ddd",
+    "dDd",
+    "ddd"
+  ],
+  "result": {
+    "item": "firstmod:diamond_detector"
+  },
+  "show_notification": true
+}

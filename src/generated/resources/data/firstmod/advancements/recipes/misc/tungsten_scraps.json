@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "firstmod:tungsten_scraps"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "firstmod:tungsten"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tungsten",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "firstmod:tungsten_scraps"
+    ]
+  },
+  "sends_telemetry_event": false
+}

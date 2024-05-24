@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.ryanod.firstmod.block.ModBlocks;
 import net.ryanod.firstmod.item.ModItems;
+import net.ryanod.firstmod.item.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -88,23 +89,7 @@ public class MagnetBlock extends Block {
             return state.is(Blocks.IRON_ORE)
                     || state.is(Blocks.DEEPSLATE_IRON_ORE);
         } else if (item.is(ModItems.METAL_MAGNET.get())) {
-            return state.is(Blocks.IRON_ORE)
-                    || state.is(Blocks.COPPER_ORE)
-                    || state.is(Blocks.DIAMOND_ORE)
-                    || state.is(Blocks.GOLD_ORE)
-                    || state.is(Blocks.LAPIS_ORE)
-                    || state.is(Blocks.EMERALD_ORE)
-                    || state.is(Blocks.REDSTONE_ORE)
-                    || state.is(ModBlocks.TUNGSTEN_ORE.get())
-                    || state.is(Blocks.DEEPSLATE_IRON_ORE)
-                    || state.is(Blocks.DEEPSLATE_COPPER_ORE)
-                    || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
-                    || state.is(Blocks.DEEPSLATE_GOLD_ORE)
-                    || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
-                    || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
-                    || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
-                    || state.is(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get())
-                    || state.is(Blocks.ANCIENT_DEBRIS);
+            return state.is(ModTags.Blocks.ORES_FOR_DETECTOR);
         } return false;
     }
 }

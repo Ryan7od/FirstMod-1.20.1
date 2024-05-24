@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.ryanod.firstmod.block.ModBlocks;
+import net.ryanod.firstmod.item.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -68,22 +69,6 @@ public class MetalMagnetItem extends Item {
 
 
     private boolean isOre(BlockState state) {
-        return state.is(Blocks.IRON_ORE)
-                || state.is(Blocks.COPPER_ORE)
-                || state.is(Blocks.DIAMOND_ORE)
-                || state.is(Blocks.GOLD_ORE)
-                || state.is(Blocks.LAPIS_ORE)
-                || state.is(Blocks.EMERALD_ORE)
-                || state.is(Blocks.REDSTONE_ORE)
-                || state.is(ModBlocks.TUNGSTEN_ORE.get())
-                || state.is(Blocks.DEEPSLATE_IRON_ORE)
-                || state.is(Blocks.DEEPSLATE_COPPER_ORE)
-                || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
-                || state.is(Blocks.DEEPSLATE_GOLD_ORE)
-                || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
-                || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
-                || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
-                || state.is(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get())
-                || state.is(Blocks.ANCIENT_DEBRIS);
+        return state.is(ModTags.Blocks.ORES_FOR_DETECTOR);
     }
 }
