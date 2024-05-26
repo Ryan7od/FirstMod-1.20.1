@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-24T01:58:44.2163971	Recipes
+// 1.20.1	2024-05-26T00:11:00.8950852	Recipes
 8057412e173b494a4d4a380a1a0e3cc70cc3f0d8 data/firstmod/advancements/recipes/misc/ancient_debris_detector.json
 8f1d2e904c274fc3f7e138d9cc3ee7e689720969 data/firstmod/advancements/recipes/misc/ancient_debris_magnet.json
 b2922380a0b4d72ead532803711a6569f6f59b5d data/firstmod/advancements/recipes/misc/diamond_detector.json
@@ -17,6 +17,7 @@ adb03553699148a3d20fd443e9714c039ac674a5 data/firstmod/advancements/recipes/misc
 a345c9a027de84d7341a62f4e3b6be02e66a0201 data/firstmod/advancements/recipes/misc/tungsten_from_smelting_raw_tungsten.json
 a981125dbf38299185e9307b228077189f2edc37 data/firstmod/advancements/recipes/misc/tungsten_from_smelting_tungsten_ore.json
 85539a83dd5af4a597bc63f8bd9ca8a9335058b2 data/firstmod/advancements/recipes/misc/tungsten_scraps.json
+ae8d507dc515b8f8bbad7d76a51749b6adc1c02d data/firstmod/advancements/recipes/misc/tungsten_staff.json
 b558b8eee3e76cafca383d4c81a85a00ca5e042f data/firstmod/recipes/ancient_debris_detector.json
 08e01f2af1b031f25277ce9f546fc0d718eee773 data/firstmod/recipes/ancient_debris_magnet.json
 52a8cf33bdbc4596e42ea7377681db0cc5031f61 data/firstmod/recipes/diamond_detector.json
@@ -34,4 +35,5 @@ f4210aba6657e111fd88322693cdfb1956a482fa data/firstmod/recipes/tungsten_from_bla
 799a111357cce704e3aa3924a43021c8eba50170 data/firstmod/recipes/tungsten_from_smelting_deepslate_tungsten_ore.json
 1c6b5d3422daeee72b10f3d20eb462e5ba1c1d42 data/firstmod/recipes/tungsten_from_smelting_raw_tungsten.json
 513d018c6ed80836cef73baeb204940795c10629 data/firstmod/recipes/tungsten_from_smelting_tungsten_ore.json
-079daff9dac41650f69a9d63948bcebda755763d data/firstmod/recipes/tungsten_scraps.json
+046bdc4173f3dccee2b13d1249029d7f0d328a10 data/firstmod/recipes/tungsten_scraps.json
+6657831a82a5ed6ae4fbbc0b788c87d76e7aa1eb data/firstmod/recipes/tungsten_staff.json

@@ -1,6 +1,6 @@
 package net.ryanod.firstmod.item;
 
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +18,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TUNGSTEN_SCRAPS = ITEMS.register("tungsten_scraps",
             () -> new Item(new Item.Properties().food(ModFoods.TUNGSTEN_SCRAPS)));
+    public static final RegistryObject<Item> TUNGSTEN_STAFF = ITEMS.register("tungsten_staff",
+            () -> new TungstenStaffItem(new Item.Properties().durability(1000)));
+
+    public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword",
+            () -> new SwordItem(ModToolTiers.TUNGSTEN, 5, 3, new Item.Properties()));
+    public static final RegistryObject<Item> TUNGSTEN_PICKAXE = ITEMS.register("tungsten_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.TUNGSTEN, 1, 2, new Item.Properties()));
+    public static final RegistryObject<Item> TUNGSTEN_AXE = ITEMS.register("tungsten_axe",
+            () -> new AxeItem(ModToolTiers.TUNGSTEN, 8, 1, new Item.Properties()));
+    public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe",
+            () -> new HoeItem(ModToolTiers.TUNGSTEN, 0, 0, new Item.Properties()));
+    public static final RegistryObject<Item> TUNGSTEN_SHOVEL = ITEMS.register("tungsten_shovel",
+            () -> new ShovelItem(ModToolTiers.TUNGSTEN, 0, 0, new Item.Properties()));
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));

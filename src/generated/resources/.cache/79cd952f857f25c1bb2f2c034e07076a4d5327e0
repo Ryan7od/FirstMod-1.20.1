@@ -1,5 +1,6 @@
-// 1.20.1	2024-05-24T01:58:44.2091574	Tags for minecraft:block mod id firstmod
+// 1.20.1	2024-05-26T00:11:00.8930946	Tags for minecraft:block mod id firstmod
+d440f831d37e5c649522d874d5c7d20221c641da data/firstmod/tags/blocks/needs_sapphire_tool.json
 566b820dbd2cecadcd1680adebbeaa63d477308f data/firstmod/tags/blocks/ores_for_detector.json
-a206f374f2b66088c32cba410c72cfb39c395b13 data/minecraft/tags/blocks/mineable/pickaxe.json
+6a8bc643137dd4583d2546075f04d67c59920ebb data/minecraft/tags/blocks/mineable/pickaxe.json
 f78af459a4892ca1737062c7d57caef9a0129c99 data/minecraft/tags/blocks/needs_diamond_tool.json
 5819b1f0b650c06452fe3783d222d8782ab62887 data/minecraft/tags/blocks/needs_iron_tool.json

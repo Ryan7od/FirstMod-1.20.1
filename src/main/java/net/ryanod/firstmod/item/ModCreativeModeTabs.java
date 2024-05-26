@@ -21,6 +21,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.TUNGSTEN.get());
                         pOutput.accept(ModItems.RAW_TUNGSTEN.get());
                         pOutput.accept(ModItems.TUNGSTEN_SCRAPS.get());
+                        pOutput.accept(ModItems.TUNGSTEN_STAFF.get());
+
+                        pOutput.accept(ModItems.TUNGSTEN_SWORD.get());
+                        pOutput.accept(ModItems.TUNGSTEN_PICKAXE.get());
+                        pOutput.accept(ModItems.TUNGSTEN_AXE.get());
+                        pOutput.accept(ModItems.TUNGSTEN_HOE.get());
+                        pOutput.accept(ModItems.TUNGSTEN_SHOVEL.get());
 
                         pOutput.accept(ModBlocks.TUNGSTEN_BLOCK.get());
                         pOutput.accept(ModBlocks.TUNGSTEN_ORE.get());

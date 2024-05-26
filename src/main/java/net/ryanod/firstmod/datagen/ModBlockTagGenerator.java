@@ -37,9 +37,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TUNGSTEN_ORE.get(),
-                     ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(),
-                     ModBlocks.MAGNET_BLOCK.get(),
-                     ModBlocks.TUNGSTEN_BLOCK.get()
+                     ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get()
+                );
+
+        this.tag(ModTags.Blocks.NEEDS_TUNGSTEN_TOOL)
+                .add(ModBlocks.MAGNET_BLOCK.get(),
+                        ModBlocks.TUNGSTEN_BLOCK.get()
                 );
     }
 }

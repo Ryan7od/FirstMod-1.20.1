@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "firstmod:tungsten"
+    },
+    "t": {
+      "item": "minecraft:trident"
+    }
+  },
+  "pattern": [
+    " T ",
+    " t ",
+    " T "
+  ],
+  "result": {
+    "item": "firstmod:tungsten_staff"
+  },
+  "show_notification": true
+}

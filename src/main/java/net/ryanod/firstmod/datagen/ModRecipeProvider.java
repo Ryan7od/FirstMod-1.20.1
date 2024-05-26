@@ -45,7 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.TUNGSTEN_BLOCK.get()), has(ModBlocks.TUNGSTEN_BLOCK.get()))
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TUNGSTEN_SCRAPS.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TUNGSTEN_SCRAPS.get(), 6)
                 .requires(ModItems.TUNGSTEN.get())
                 .unlockedBy(getHasName(ModItems.TUNGSTEN.get()), has(ModItems.TUNGSTEN.get()))
                 .save(consumer);
@@ -151,6 +151,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE))
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TUNGSTEN_STAFF.get(), 1)
+                .pattern(" T ")
+                .pattern(" t ")
+                .pattern(" T ")
+                .define('T', ModItems.TUNGSTEN.get())
+                .define('t', Items.TRIDENT)
+                .unlockedBy(getHasName(ModItems.TUNGSTEN.get()), has(ModItems.TUNGSTEN.get()))
+                .unlockedBy(getHasName(Items.TRIDENT), has(Items.TRIDENT))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGNET_BLOCK.get(), 2)

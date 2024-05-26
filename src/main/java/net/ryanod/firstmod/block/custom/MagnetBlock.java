@@ -66,6 +66,9 @@ public class MagnetBlock extends Block {
                     }
                 }
 
+                pPlayer.getItemInHand(pHand).hurtAndBreak(1, pPlayer,
+                        player -> player.broadcastBreakEvent(player.getUsedItemHand()));
+
                 if (!foundBlock) {
                     pPlayer.sendSystemMessage(Component.literal("No ores found"));
                 }

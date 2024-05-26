@@ -3,6 +3,12 @@
   "item.firstmod.raw_tungsten": "Raw Tungsten",
   "item.firstmod.tungsten_scraps": "Tungsten Scraps",
 
+  "item.firstmod.tungsten_sword": "Tungsten Sword",
+  "item.firstmod.tungsten_pickaxe": "Tungsten Pickaxe",
+  "item.firstmod.tungsten_axe": "Tungsten Axe",
+  "item.firstmod.tungsten_hoe": "Tungsten Hoe",
+  "item.firstmod.tungsten_shovel": "Tungsten Shovel",
+
   "item.firstmod.metal_detector": "Metal Detector",
   "item.firstmod.iron_detector": "Iron Detector",
   "item.firstmod.diamond_detector": "Diamond Detector",
@@ -22,5 +28,6 @@
 
   "tooltip.firstmod.magnet_block": "This extends the range of any magnet, just right click on the block with your magnet!",
   "tooltip.firstmod.metal_magnet": "If any ores are below you, this magnet will suck them up from underground and put them straight into your inventory, one at a time",
-  "tooltip.firstmod.metal_detector": "This metal detector will let you know if there are any valuables below your feet"
+  "tooltip.firstmod.metal_detector": "Scans under your feet for valuables!",
+  "tooltip.firstmod.tungsten_staff": "Commands the power of lighting!"
 }
